@@ -15,7 +15,7 @@ export default defineNuxtConfig({
   },
   // https://nuxt.com/docs/getting-started/upgrade#testing-nuxt-4
   future: { compatibilityVersion: 4 },
-  compatibilityDate: '2025-03-01',
+  compatibilityDate: '2025-12-16',
 
   // https://hub.nuxt.com/docs/getting-started/installation#options
   hub: {
@@ -29,6 +29,13 @@ export default defineNuxtConfig({
         quotes: 'single',
         commaDangle: 'never'
       }
+    }
+  },
+  nitro: {
+    preset: 'cloudflare_module',
+    cloudflare: {
+      deployConfig: true,
+      nodeCompat: true
     }
   }
 })
